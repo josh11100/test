@@ -1,0 +1,74 @@
+/* App background */
+[data-testid="stAppViewContainer"]{
+  background: linear-gradient(180deg,#f5f7fb 0%,#ffffff 60%);
+}
+
+/* Titles */
+h1,h2,h3,h4{ color:#003660; } /* UCSB navy */
+
+/* Sidebar look */
+[data-testid="stSidebar"]{
+  background: linear-gradient(180deg,#002855 0%,#003660 80%);
+  color:#f9fafb;
+  border-right:1px solid rgba(15,23,42,.25);
+}
+[data-testid="stSidebar"] *{ color:#f9fafb !important; }
+[data-testid="stSidebar"] .block-container{ padding-top:1.5rem; }
+
+/* Radio group -> hide bullets and style like tabs */
+[data-testid="stSidebar"] [role="radiogroup"] label{
+  cursor:pointer;
+  padding:.35rem .25rem;
+  border-bottom:1px solid rgba(148,163,184,.25);
+}
+/* hide default radio circle */
+[data-testid="stSidebar"] [role="radiogroup"] label>div:first-child{ display:none; }
+/* base label style */
+[data-testid="stSidebar"] [role="radiogroup"] p{
+  font-weight:500;
+  text-decoration:underline;
+  letter-spacing:.01em;
+}
+/* active tab */
+[data-testid="stSidebar"] [role="radio"][aria-checked="true"]{
+  background: rgba(253,181,21,.16); /* gold tint */
+  border-radius:.35rem;
+}
+[data-testid="stSidebar"] [role="radio"][aria-checked="true"] p{
+  font-weight:700;
+  color:#FDB515 !important; /* UCSB gold */
+}
+
+/* Helpers */
+.small{ font-size:.85rem; color:#6b7280; }
+.muted{ color:#6b7280; }
+.pill{
+  display:inline-block; padding:4px 10px; border-radius:9999px;
+  background:#eef2ff; color:#003660; font-weight:600; margin-right:8px;
+}
+.tag{
+  display:inline-block; padding:2px 8px; border-radius:9999px;
+  background:#eff6ff; color:#1d4ed8; font-weight:500; margin-right:6px;
+}
+.code{
+  font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background:#0b1021; color:#d1e1ff; padding:3px 6px; border-radius:6px;
+}
+
+/* Buttons */
+.stButton > button, .st-link-button{
+  border-radius:9999px; border-width:0; padding:.4rem 1.15rem;
+  font-weight:600; background:#003660; color:#f9fafb;
+  box-shadow:0 4px 10px rgba(15,23,42,.3);
+}
+.stButton > button:hover, .st-link-button:hover{
+  background:#FDB515; color:#111827; box-shadow:0 6px 14px rgba(15,23,42,.35);
+}
+
+/* Dataframe header */
+.stDataFrame thead tr th{
+  background-color:#003660 !important; color:#f9fafb !important;
+}
+
+/* Expander hover */
+[data-testid="stExpander"] > summary:hover{ color:#003660; }
